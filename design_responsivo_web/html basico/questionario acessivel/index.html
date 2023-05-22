@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Questionário Acessivel" />
+    <title>Questionário de acessibilidade</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <h1 id="logo" ><a href="">Teste seus Conhecimentos</a></h1>
+      <h1>Questionário sobre HTML/CSS </h1>
+        <nav>
+            <ul>
+             <li><a href="#student-info">INFO</a></li>
+             <li><a href="#html-questions">HTML</a></li>
+             <li><a href="#css-questions">CSS</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+      <form method="post" action="">
+        <section role="region" aria-labelledby="student-info">
+          <h2 id="student-info">Informações do Estudante</h2>
+          <div class="info">
+            <label for="student-name">Nome:</label>
+            <input type="text" name="student-name" id="student-name" />
+          </div>
+          <div class="info">
+            <label for="student-email">Email:</label>
+            <input type="email" name="student-email" id="student-email" />
+          </div>
+          <div class="info">
+            <label for="birth-date">Nasci<span class="sr-only">(Date of Birth)</span></label>
+            <input type="date" name="birth-date" id="birth-date" />
+          </div>
+        </section>
+        <section role="region" aria-labelledby="html-questions">
+          <h2 id="html-questions">HTML</h2>
+          <div class="question-block">
+            <p>1</p>
+            <fieldset class="question" name="html-question-one">
+              <legend>
+                HTML é uma linguagem de...
+              </legend>
+              <ul class="answers-list">
+                <li>
+                  <label for="q1-a1">
+                    <input type="radio" id="q1-a1" name="q1" value="programacao" />
+                    Programação
+                  </label>
+                </li>
+                <li>
+                  <label for="q1-a2">
+                    <input type="radio" id="q1-a2" name="q1" value="formatacao" />
+                    Formatação
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+          <div class="question-block">
+            <p>2</p>
+            <fieldset class="question" name="html-question-two">
+              <legend>
+                Qual é a função da tag DD?
+              </legend>
+              <ul class="answers-list">
+                <li>
+                  <label for="q2-a1">
+                    <input type="radio" id="q2-a1" name="q2" value="Elemento_do_Termo" />
+                    Elemento do Termo
+                  </label>
+                </li>
+                <li>
+                  <label for="q2-a2">
+                    <input type="radio" id="q2-a2" name="q2" value="Definição_de_elemento" />
+                    Definição de elemento
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+        </section>
+        <section role="region" aria-labelledby="css-questions">
+          <h2 id="css-questions">CSS</h2>
+          <div class="formrow">
+            <div class="question-block">
+              <p>1</p>
+              <fieldset class="question" name="css-question-one">
+                <legend>
+                  Qual propriedade devemos utilizar para alterar a cor de um texto?
+                </legend>
+                <ul class="answers-list">
+                  <li>
+                    <label for="q1-a1">
+                      <input type="radio" id="q1-a1" name="q1" value="font-color" />
+                      Font-Color
+                    </label>
+                  </li>
+                  <li>
+                    <label for="q1-a2">
+                      <input type="radio" id="q1-a2" name="q1" value="color" />
+                      Color
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+            </div>  
+            <div class="question-block">
+              <p>2</p>
+              <fieldset class="question" name="html-question-two">
+                <legend>
+                  Para adicionar um espaçamento interno, usamos:
+                </legend>
+                <ul class="answers-list">
+                  <li>
+                    <label for="q2-a1">
+                      <input type="radio" id="q2-a1" name="q2" value="margin" />
+                      Margin
+                    </label>
+                  </li>
+                  <li>
+                    <label for="q2-a2">
+                      <input type="radio" id="q2-a2" name="q2" value="padding" />
+                      Padding
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+            </div>
+            <div class="question-block">
+              <label for="customer">Você é um desenvolvedor FrontEnd?</label>
+            </div>
+            <div class="answer">
+              <select name="customer" id="customer" required>
+                <option value="">Selecione uma opção</option>
+                <option value="sim">Sim</option>
+                <option value="não">Não</option>
+              </select>
+            </div>
+            <div class="question-block">
+              <label for="css-questions">Vôce tem alguma pergunta?:</label>
+            </div>
+            <div class="answer">
+              <textarea id="css-questions" name="css-questions" rows="5" cols="24" placeholder="..."></textarea>
+            </div>
+          </div>
+        </section>
+        <button type="submit">Enviar</button>
+      </form>
+    </main>
+    <footer>
+      <address>
+        <a href="">Sobre HTML & CSS</a><br />
+        São Paulo<br />
+        Brazil
+      </address>
+    </footer>
+  </body>
+</html>
